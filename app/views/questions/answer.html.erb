@@ -1,0 +1,19 @@
+<div class="m-5">
+  <h3>Your Question:</h3>
+  <p><%= @question %></p>
+</div>
+
+<div class="m-5 bg-warning bg-gradient">
+  <h3>Coach's answer:</h3>
+  <p><%=
+  if @question == "I am going to work"
+    "Great!"
+  elsif @question[-1] == "?"
+    "Silly question, get dressed and go to work!"
+  else
+    "I don't care, get dressed and go to work!"
+  end
+  %></p>
+</div>
+
+<span class="ms-5"><%= link_to 'Back to asking a question', ask_path %></span>
